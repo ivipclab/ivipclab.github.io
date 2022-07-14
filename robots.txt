@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://ivipclab.github.io/sitemap.xml
