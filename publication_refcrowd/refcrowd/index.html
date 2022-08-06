@@ -60,10 +60,10 @@
   
     
   
-  <meta name="description" content="ivipc lab" />
+  <meta name="description" content="RefCrowd is a new challenging referring comprehension dataset for complex real-world crowd grounding, which towards looking for the target person in crowd with referring expressions." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://ivipclab.github.io/author/%E5%90%B3%E6%81%A9%E9%81%94/" />
+  <link rel="alternate" hreflang="en-us" href="https://ivipclab.github.io/publication_refcrowd/refcrowd/" />
 
   
   
@@ -270,8 +270,6 @@
   
 
   
-    <link rel="alternate" href="/author/%E5%90%B3%E6%81%A9%E9%81%94/index.xml" type="application/rss+xml" title="ivipc lab" />
-  
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -280,7 +278,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://ivipclab.github.io/author/%E5%90%B3%E6%81%A9%E9%81%94/" />
+  <link rel="canonical" href="https://ivipclab.github.io/publication_refcrowd/refcrowd/" />
 
   
   
@@ -291,7 +289,6 @@
   
   
     
-    
   
   
 
@@ -300,17 +297,21 @@
     
     
   
-  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:card" content="summary_large_image" />
   
   <meta property="og:site_name" content="ivipc lab" />
-  <meta property="og:url" content="https://ivipclab.github.io/author/%E5%90%B3%E6%81%A9%E9%81%94/" />
-  <meta property="og:title" content="吳恩達 | ivipc lab" />
-  <meta property="og:description" content="ivipc lab" /><meta property="og:image" content="https://ivipclab.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
-    <meta property="twitter:image" content="https://ivipclab.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:url" content="https://ivipclab.github.io/publication_refcrowd/refcrowd/" />
+  <meta property="og:title" content="RefCrowd: Grounding the Target in Crowd with Referring Expressions | ivipc lab" />
+  <meta property="og:description" content="RefCrowd is a new challenging referring comprehension dataset for complex real-world crowd grounding, which towards looking for the target person in crowd with referring expressions." /><meta property="og:image" content="https://ivipclab.github.io/publication_refcrowd/refcrowd/featured.jpg" />
+    <meta property="twitter:image" content="https://ivipclab.github.io/publication_refcrowd/refcrowd/featured.jpg" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2020-12-13T00:00:00&#43;00:00" />
+      <meta
+        property="article:published_time"
+        content="2022-05-30T00:00:00&#43;00:00"
+      />
     
+    <meta property="article:modified_time" content="2022-05-30T00:00:00&#43;00:00">
   
 
   
@@ -321,15 +322,17 @@
 
   
 
+  
 
 
 
 
-  <title>吳恩達 | ivipc lab</title>
+
+  <title>RefCrowd: Grounding the Target in Crowd with Referring Expressions | ivipc lab</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   "  >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="c48417fd943d36a1aa1c128b9bcb59a3" >
 
   
   
@@ -630,36 +633,380 @@
   </div>
 
   <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>RefCrowd: Grounding the Target in Crowd with Referring Expressions</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
     
 
+  <span >
+      <a href="/author/qiuheqian/">QiuHeqian</a></span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="about me"></i>, <span >
+      <a href="/author/hongliang-li/">Hongliang Li</a></span>, <span >
+      <a href="/author/taijin-zhao/">Taijin Zhao</a></span>, <span >
+      <a href="/author/lanxiao-wang/">Lanxiao Wang</a></span>, <span >
+      <a href="/author/qingbo-wu/">Qingbo Wu</a></span>, <span >
+      <a href="/author/fanman-meng/">Fanman Meng</a></span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    May 30, 2022
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
 
 
-<div class="universal-wrapper pt-3">
-  <h1>吳恩達</h1>
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header" href="https://openaccess.thecvf.com/content/ICCV2021/papers/Qiu_CrossDet_Crossline_Representation_for_Object_Detection_ICCV_2021_paper.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header js-cite-modal"
+        data-filename="/publication_refcrowd/refcrowd/cite.bib">
+  Cite
+</a>
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://github.com/QiuHeqian/MMDetection-REF" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://qiuheqian.github.io/dataset/refcrowd/" target="_blank" rel="noopener">
+  Dataset
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 
-<section id="profile-page" class="pt-5">
-  <div class="container">
-    
-    
+</div>
 
-    
-    
-    
-    <div class="article-widget content-widget-hr">
-      <h3>Latest</h3>
-      <ul>
-        
-        <li>
-          <a href="/post/getting-started/">Welcome to Wowchemy, the website builder for Hugo</a>
-        </li>
-        
-      </ul>
-    </div>
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 458px;">
+  <div style="position: relative">
+    <img src="/publication_refcrowd/refcrowd/featured_huf60a27559868fd062be844f5da6460c8_111334_720x2500_fit_q75_h2_lanczos.webp" width="720" height="458" alt="" class="featured-image">
     
   </div>
-</section>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="refcrowd-dataset"><strong>RefCrowd Dataset</strong></h2>
+<p>RefCrowd is a new challenging referring comprehension dataset for complex real-world crowd grounding, which towards looking for the target person in crowd with referring expressions.  Our dataset contains a crowd of persons some of whom share similar visual appearance, and diverse natural languages covering unique properties of the target person. It not only requires to sufficiently mine and understand natural language information, but also requires to carefully focus on subtle diﬀerences between persons in an image, so as to realize fine-grained mapping from language to vision.</p>
+<p>This dataset contains 75,763 expressions for 37,999 queried persons with bounding boxes on 10,702 images. There are 6,885 images with 48,509 expressions for training, 1,260 images with 9,074 expressions for validation and 2,557 images with 18,180 expressions for testing, respectively.</p>
+<h2 id="download-refcrowd-dataset"><strong>Download RefCrowd Dataset</strong></h2>
+<p>To ensure the rational use of RefCrowd dataset, researchers requires to sign <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWgI0mzT1OFrhEthLZLURvuC-he_Hy882nEnCzhiM6DAoFEg/viewform?usp=sf_link" target="_blank" rel="noopener"><strong>RefCrowd Terms of Use</strong></a> as restrictions on access to dataset to
+privacy protection and use dataset for non-commercial research and/or educational purposes.</p>
+<p>If you have recieved access, you can download and extract our <strong>RefCrowd Dataset</strong>.</p>
+<p>The directory structure of the dataset is as follows:</p>
+<pre><code>RefCrowd/
+├── images/
+│   ├── train/
+│   ├── val/
+│   └── test/
+│  
+└── annotations/
+    ├── train.json
+    ├── val.json
+    └── test.json
+</code></pre>
+<h2 id="annotations"><strong>Annotations</strong></h2>
+<p>In RefCrowd dataset, each image may contains multiple persons, and each person can be described by multiple expressions/sentences. The person location can be denoted as (x_c, y_c, w, h), where (x_c, y_c) denotes the center coordinates of a person, w and h denote its width and height.</p>
+<p>The dataset annotations are provided in JSON format. Researchers can read the annotation files by the following Python 3 code:</p>
+<pre><code>import json
+info_dict=json.load(open(ann_file,'r'))
+Images=info_dict['Imgs'] # image annotations
+Anns=info_dict['Anns'] # person localization annotations
+Refs=info_dict['Refs'] # all expressions for each person annotations
+Sents=info_dict['Sents'] # each experssion annotations
+Cats=info_dict['Cats'] # only include the person catgory
+att_to_ix=info_dict['att_to_ix'] # all attribute categories
+att_to_cnt=info_dict['att_to_cnt'] # the number of each attribution in RefCrowd
+</code></pre>
+<h2 id="evaluation"><strong>Evaluation</strong></h2>
+<p>We calculate the intersection-over-union (IoU) between the predicted bounding box and ground-truth one to measure whether the prediction is correct. A predicted bounding is treated as correct if IoU is higher than desired IoU threshold.
+Instead of using single IoU threshold 0.5, we adopt the mean accuracy <strong>mAcc</strong> to measure the localization performance of method which averages the accuracy over IoU thresholds from loose
+0.5 to strict 0.95 with interval 0.05 similar to popular COCO metrics. mAcc is a comprehensive indicator for widely real-world applications.</p>
+<p>For convenience, researchers can refer to the code (<a href="https://github.com/QiuHeqian/MMDetection-REF" target="_blank" rel="noopener"><strong>refcrowd.py</strong></a>) provided by us for reading annotations and evaluation method.</p>
+<p>If you have any question, please concat us (<a href="mailto:hqqiu@std.uestc.edu.cn">hqqiu@std.uestc.edu.cn</a>).</p>
+<h2 id="citation"><strong>Citation</strong></h2>
+<p>If you find RefCrowd useful in your research, please consider citing:</p>
+<pre><code>@article{qiu2022refcrowd,
+  title={RefCrowd: Grounding the Target in Crowd with Referring Expressions},
+  author={Qiu, Heqian and Li, Hongliang and Zhao, Taijin and Wang, Lanxiao and Wu, Qingbo and Meng, Fanman},
+  journal={arXiv preprint arXiv:2206.08172},
+  year={2022}
+}
+</code></pre>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://ivipclab.github.io/publication_refcrowd/refcrowd/&amp;text=RefCrowd:%20Grounding%20the%20Target%20in%20Crowd%20with%20Referring%20Expressions" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://ivipclab.github.io/publication_refcrowd/refcrowd/&amp;t=RefCrowd:%20Grounding%20the%20Target%20in%20Crowd%20with%20Referring%20Expressions" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=RefCrowd:%20Grounding%20the%20Target%20in%20Crowd%20with%20Referring%20Expressions&amp;body=https://ivipclab.github.io/publication_refcrowd/refcrowd/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://ivipclab.github.io/publication_refcrowd/refcrowd/&amp;title=RefCrowd:%20Grounding%20the%20Target%20in%20Crowd%20with%20Referring%20Expressions" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=RefCrowd:%20Grounding%20the%20Target%20in%20Crowd%20with%20Referring%20Expressions%20https://ivipclab.github.io/publication_refcrowd/refcrowd/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://ivipclab.github.io/publication_refcrowd/refcrowd/&amp;title=RefCrowd:%20Grounding%20the%20Target%20in%20Crowd%20with%20Referring%20Expressions" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
   </div>
 
   <div class="page-footer">
