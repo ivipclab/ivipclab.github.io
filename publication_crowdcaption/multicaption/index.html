@@ -306,7 +306,12 @@
     <meta property="twitter:image" content="https://ivipclab.github.io/publication_crowdcaption/multicaption/featured.jpg" /><meta property="og:locale" content="en-us" />
   
     
+      <meta
+        property="article:published_time"
+        content="2022-07-20T00:00:00&#43;00:00"
+      />
     
+    <meta property="article:modified_time" content="2022-07-20T00:00:00&#43;00:00">
   
 
   
@@ -691,7 +696,7 @@
     
       
     
-    Jan 1, 0001
+    Jul 20, 2022
   </span>
   
 
@@ -813,15 +818,21 @@
 </code></pre>
 <h2 id="annotations"><strong>Annotations</strong></h2>
 <p>In CrowdCaption dataset, each image may contains multiple caption annotations, and each caption annotations has a detailed region grounding annotation. The location can be denoted as (x_c, y_c, w, h), where (x_c, y_c) denotes the center coordinates of a person, w and h denote its width and height. The dataset annotations are provided in JSON format. Researchers can read the annotation files by the following Python 3 code:</p>
-<pre><code>import json
-info_dict=json.load(open(ann_file,'r'))
-Images=info_dict['Imgs'] # image annotations
-Anns=info_dict['Anns'] # person localization annotations
-Refs=info_dict['Refs'] # all expressions for each person annotations
-Sents=info_dict['Sents'] # each experssion annotations
-Cats=info_dict['Cats'] # only include the person catgory
-att_to_ix=info_dict['att_to_ix'] # all attribute categories
-att_to_cnt=info_dict['att_to_cnt'] # the number of each attribution in RefCrowd
+<pre><code> 
+import json
+
+path='./crowdcaption.json'
+info_dict=json.load(open(path))['images']
+image_name=info_dict['filename'] # image name
+split=info_dict['split'] # image split in train, val or test
+image_id=info_dict['imgid'] # image id
+human_position=info_dict['box'] # single person localization annotations [x, y, w, h]
+sentence_id=info_dict['dense_caption']['sentids'] # sentence id
+region_id=info_dict['dense_caption']['region_ids'] # region id
+sentences=info_dict['dense_caption']['sentences']  # all descriptions for each images
+region_position=info_dict['dense_caption']['union_boxes'] # crowd region localization annotations [x, y, w, h] for each images
+human_in_region_idx=info_dict['dense_caption']['sentences_region_idx'] # the human idx for who are in the corresponding region
+ 
 </code></pre>
 <p>If you have any question, please concat us <a href="mailto:ivipclab539@126.com">ivipclab539@126.com</a>.</p>
 <h2 id="citation"><strong>Citation</strong></h2>
@@ -844,12 +855,6 @@ att_to_cnt=info_dict['att_to_cnt'] # the number of each attribution in RefCrowd
 
 
 
-
-<div class="article-tags">
-  
-  <a class="badge badge-light" href="/tag/source-themes/">Source Themes</a>
-  
-</div>
 
 
 

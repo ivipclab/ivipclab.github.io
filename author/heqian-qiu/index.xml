@@ -5,7 +5,7 @@
     <link>https://ivipclab.github.io/author/heqian-qiu/</link>
       <atom:link href="https://ivipclab.github.io/author/heqian-qiu/index.xml" rel="self" type="application/rss+xml" />
     <description>Heqian Qiu</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 20 Jul 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ivipclab.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Heqian Qiu</title>
@@ -15,7 +15,7 @@
     <item>
       <title>What Happens in Crowd Scenes: A New Dataset about Crowd Scenes for Image Captioning</title>
       <link>https://ivipclab.github.io/publication_crowdcaption/multicaption/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
       <guid>https://ivipclab.github.io/publication_crowdcaption/multicaption/</guid>
       <description>&lt;h2 id=&#34;crowdcaption-dataset&#34;&gt;&lt;strong&gt;CrowdCaption Dataset&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;CrowdCaption is a new challenging image captioning dataset for complex real-world crowd scene understanding, which towards to describe crowd scene. Our dataset has the advantages of crowd-topic scenes, comprehensive and complex caption descriptions, typical relationships and detailed grounding annotations. The complexity and diversity of the descriptions and the specificity of the crowd scenes make this dataset extremely challenging. This dataset contains 43,306 captions for 21,794 regions with bounding boxes on 11161 images. There are 7,161 images for training, 1,000 images for validation and 3,000 images for testing, respectively.&lt;/p&gt;
@@ -38,15 +38,21 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;annotations&#34;&gt;&lt;strong&gt;Annotations&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;In CrowdCaption dataset, each image may contains multiple caption annotations, and each caption annotations has a detailed region grounding annotation. The location can be denoted as (x_c, y_c, w, h), where (x_c, y_c) denotes the center coordinates of a person, w and h denote its width and height. The dataset annotations are provided in JSON format. Researchers can read the annotation files by the following Python 3 code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;import json
-info_dict=json.load(open(ann_file,&#39;r&#39;))
-Images=info_dict[&#39;Imgs&#39;] # image annotations
-Anns=info_dict[&#39;Anns&#39;] # person localization annotations
-Refs=info_dict[&#39;Refs&#39;] # all expressions for each person annotations
-Sents=info_dict[&#39;Sents&#39;] # each experssion annotations
-Cats=info_dict[&#39;Cats&#39;] # only include the person catgory
-att_to_ix=info_dict[&#39;att_to_ix&#39;] # all attribute categories
-att_to_cnt=info_dict[&#39;att_to_cnt&#39;] # the number of each attribution in RefCrowd
+&lt;pre&gt;&lt;code&gt; 
+import json
+
+path=&#39;./crowdcaption.json&#39;
+info_dict=json.load(open(path))[&#39;images&#39;]
+image_name=info_dict[&#39;filename&#39;] # image name
+split=info_dict[&#39;split&#39;] # image split in train, val or test
+image_id=info_dict[&#39;imgid&#39;] # image id
+human_position=info_dict[&#39;box&#39;] # single person localization annotations [x, y, w, h]
+sentence_id=info_dict[&#39;dense_caption&#39;][&#39;sentids&#39;] # sentence id
+region_id=info_dict[&#39;dense_caption&#39;][&#39;region_ids&#39;] # region id
+sentences=info_dict[&#39;dense_caption&#39;][&#39;sentences&#39;]  # all descriptions for each images
+region_position=info_dict[&#39;dense_caption&#39;][&#39;union_boxes&#39;] # crowd region localization annotations [x, y, w, h] for each images
+human_in_region_idx=info_dict[&#39;dense_caption&#39;][&#39;sentences_region_idx&#39;] # the human idx for who are in the corresponding region
+ 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If you have any question, please concat us &lt;a href=&#34;mailto:ivipclab539@126.com&#34;&gt;ivipclab539@126.com&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;citation&#34;&gt;&lt;strong&gt;Citation&lt;/strong&gt;&lt;/h2&gt;

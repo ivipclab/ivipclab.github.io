@@ -5,12 +5,69 @@
     <link>https://ivipclab.github.io/author/qingbo-wu/</link>
       <atom:link href="https://ivipclab.github.io/author/qingbo-wu/index.xml" rel="self" type="application/rss+xml" />
     <description>Qingbo Wu</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 30 May 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 20 Jul 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://ivipclab.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Qingbo Wu</title>
       <link>https://ivipclab.github.io/author/qingbo-wu/</link>
     </image>
+    
+    <item>
+      <title>What Happens in Crowd Scenes: A New Dataset about Crowd Scenes for Image Captioning</title>
+      <link>https://ivipclab.github.io/publication_crowdcaption/multicaption/</link>
+      <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://ivipclab.github.io/publication_crowdcaption/multicaption/</guid>
+      <description>&lt;h2 id=&#34;crowdcaption-dataset&#34;&gt;&lt;strong&gt;CrowdCaption Dataset&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;CrowdCaption is a new challenging image captioning dataset for complex real-world crowd scene understanding, which towards to describe crowd scene. Our dataset has the advantages of crowd-topic scenes, comprehensive and complex caption descriptions, typical relationships and detailed grounding annotations. The complexity and diversity of the descriptions and the specificity of the crowd scenes make this dataset extremely challenging. This dataset contains 43,306 captions for 21,794 regions with bounding boxes on 11161 images. There are 7,161 images for training, 1,000 images for validation and 3,000 images for testing, respectively.&lt;/p&gt;
+&lt;h2 id=&#34;download-crowdcaption-dataset&#34;&gt;&lt;strong&gt;Download CrowdCaption Dataset&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;To ensure the rational use of CrowdCaption dataset, researchers requires to sign &lt;a href=&#34;https://docs.google.com/forms/d/e/1FAIpQLSeWgI0mzT1OFrhEthLZLURvuC-he_Hy882nEnCzhiM6DAoFEg/viewform?usp=sf_link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;CrowdCaption Terms of Use&lt;/strong&gt;&lt;/a&gt; as restrictions on access to dataset to privacy protection and use dataset for non-commercial research and/or educational purposes. If you have recieved access, you can download and extract our &lt;strong&gt;CrowdCaption Dataset&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The directory structure of the dataset is as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;CrowdCaption/
+├── crowdcaption_images.zip
+│  
+└── crowdcaption.json
+│  
+└── features_fasterrcnn/
+    ├── part1.zip/
+    └── part2.zip/
+│  
+└── features_hrnet_keypoints
+    ├── part01.zip/
+    ├──  ...
+    └── part09.zip/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;annotations&#34;&gt;&lt;strong&gt;Annotations&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;In CrowdCaption dataset, each image may contains multiple caption annotations, and each caption annotations has a detailed region grounding annotation. The location can be denoted as (x_c, y_c, w, h), where (x_c, y_c) denotes the center coordinates of a person, w and h denote its width and height. The dataset annotations are provided in JSON format. Researchers can read the annotation files by the following Python 3 code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; 
+import json
+
+path=&#39;./crowdcaption.json&#39;
+info_dict=json.load(open(path))[&#39;images&#39;]
+image_name=info_dict[&#39;filename&#39;] # image name
+split=info_dict[&#39;split&#39;] # image split in train, val or test
+image_id=info_dict[&#39;imgid&#39;] # image id
+human_position=info_dict[&#39;box&#39;] # single person localization annotations [x, y, w, h]
+sentence_id=info_dict[&#39;dense_caption&#39;][&#39;sentids&#39;] # sentence id
+region_id=info_dict[&#39;dense_caption&#39;][&#39;region_ids&#39;] # region id
+sentences=info_dict[&#39;dense_caption&#39;][&#39;sentences&#39;]  # all descriptions for each images
+region_position=info_dict[&#39;dense_caption&#39;][&#39;union_boxes&#39;] # crowd region localization annotations [x, y, w, h] for each images
+human_in_region_idx=info_dict[&#39;dense_caption&#39;][&#39;sentences_region_idx&#39;] # the human idx for who are in the corresponding region
+ 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you have any question, please concat us &lt;a href=&#34;mailto:ivipclab539@126.com&#34;&gt;ivipclab539@126.com&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;citation&#34;&gt;&lt;strong&gt;Citation&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;If you find CrowdCaption useful in your research, please consider citing:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@inproceedings{wang2021what,
+  title={What Happens in Crowd Scenes: A New Dataset about Crowd Scenes for Image Captioning},
+  author={Wang, Lanxiao and Li, Hongliang and Wen, Zhehu, Zhang, Xiaoliang and Qiu, Heqian,
+   Meng, Fanman and Wu, Qingbo},
+  booktitle={IEEE Transactions on Multimedia},
+  pages={0--0},
+  year={2022}
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>RefCrowd: Grounding the Target in Crowd with Referring Expressions</title>
@@ -61,57 +118,6 @@ Instead of using single IoU threshold 0.5, we adopt the mean accuracy &lt;strong
   title={RefCrowd: Grounding the Target in Crowd with Referring Expressions},
   author={Qiu, Heqian and Li, Hongliang and Zhao, Taijin and Wang, Lanxiao and Wu, Qingbo and Meng, Fanman},
   journal={arXiv preprint arXiv:2206.08172},
-  year={2022}
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>What Happens in Crowd Scenes: A New Dataset about Crowd Scenes for Image Captioning</title>
-      <link>https://ivipclab.github.io/publication_crowdcaption/multicaption/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivipclab.github.io/publication_crowdcaption/multicaption/</guid>
-      <description>&lt;h2 id=&#34;crowdcaption-dataset&#34;&gt;&lt;strong&gt;CrowdCaption Dataset&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;CrowdCaption is a new challenging image captioning dataset for complex real-world crowd scene understanding, which towards to describe crowd scene. Our dataset has the advantages of crowd-topic scenes, comprehensive and complex caption descriptions, typical relationships and detailed grounding annotations. The complexity and diversity of the descriptions and the specificity of the crowd scenes make this dataset extremely challenging. This dataset contains 43,306 captions for 21,794 regions with bounding boxes on 11161 images. There are 7,161 images for training, 1,000 images for validation and 3,000 images for testing, respectively.&lt;/p&gt;
-&lt;h2 id=&#34;download-crowdcaption-dataset&#34;&gt;&lt;strong&gt;Download CrowdCaption Dataset&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;To ensure the rational use of CrowdCaption dataset, researchers requires to sign &lt;a href=&#34;https://docs.google.com/forms/d/e/1FAIpQLSeWgI0mzT1OFrhEthLZLURvuC-he_Hy882nEnCzhiM6DAoFEg/viewform?usp=sf_link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;CrowdCaption Terms of Use&lt;/strong&gt;&lt;/a&gt; as restrictions on access to dataset to privacy protection and use dataset for non-commercial research and/or educational purposes. If you have recieved access, you can download and extract our &lt;strong&gt;CrowdCaption Dataset&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;The directory structure of the dataset is as follows:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;CrowdCaption/
-├── crowdcaption_images.zip
-│  
-└── crowdcaption.json
-│  
-└── features_fasterrcnn/
-    ├── part1.zip/
-    └── part2.zip/
-│  
-└── features_hrnet_keypoints
-    ├── part01.zip/
-    ├──  ...
-    └── part09.zip/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;annotations&#34;&gt;&lt;strong&gt;Annotations&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;In CrowdCaption dataset, each image may contains multiple caption annotations, and each caption annotations has a detailed region grounding annotation. The location can be denoted as (x_c, y_c, w, h), where (x_c, y_c) denotes the center coordinates of a person, w and h denote its width and height. The dataset annotations are provided in JSON format. Researchers can read the annotation files by the following Python 3 code:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;import json
-info_dict=json.load(open(ann_file,&#39;r&#39;))
-Images=info_dict[&#39;Imgs&#39;] # image annotations
-Anns=info_dict[&#39;Anns&#39;] # person localization annotations
-Refs=info_dict[&#39;Refs&#39;] # all expressions for each person annotations
-Sents=info_dict[&#39;Sents&#39;] # each experssion annotations
-Cats=info_dict[&#39;Cats&#39;] # only include the person catgory
-att_to_ix=info_dict[&#39;att_to_ix&#39;] # all attribute categories
-att_to_cnt=info_dict[&#39;att_to_cnt&#39;] # the number of each attribution in RefCrowd
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If you have any question, please concat us &lt;a href=&#34;mailto:ivipclab539@126.com&#34;&gt;ivipclab539@126.com&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;citation&#34;&gt;&lt;strong&gt;Citation&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;If you find CrowdCaption useful in your research, please consider citing:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;@inproceedings{wang2021what,
-  title={What Happens in Crowd Scenes: A New Dataset about Crowd Scenes for Image Captioning},
-  author={Wang, Lanxiao and Li, Hongliang and Wen, Zhehu, Zhang, Xiaoliang and Qiu, Heqian,
-   Meng, Fanman and Wu, Qingbo},
-  booktitle={IEEE Transactions on Multimedia},
-  pages={0--0},
   year={2022}
 }
 &lt;/code&gt;&lt;/pre&gt;
