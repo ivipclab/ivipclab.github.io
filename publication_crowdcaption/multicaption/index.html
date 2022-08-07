@@ -799,7 +799,7 @@
     <div class="article-style">
       <h2 id="crowdcaption-dataset"><strong>CrowdCaption Dataset</strong></h2>
 <p>CrowdCaption is a new challenging image captioning dataset for complex real-world crowd scene understanding, which towards to describe crowd scene. Our dataset has the advantages of crowd-topic scenes, comprehensive and complex caption descriptions, typical relationships and detailed grounding annotations. The complexity and diversity of the descriptions and the specificity of the crowd scenes make this dataset extremely challenging. This dataset contains 43,306 captions for 21,794 regions with bounding boxes on 11161 images. There are 7,161 images for training, 1,000 images for validation and 3,000 images for testing, respectively.</p>
-<h2 id="download-our-crowdcaption-dataset"><strong>Download our CrowdCaption Dataset</strong></h2>
+<h2 id="download-crowdcaption-dataset"><strong>Download CrowdCaption Dataset</strong></h2>
 <p>To ensure the rational use of CrowdCaption dataset, researchers requires to sign <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-lXeeDFoMYqNa-TytDz8-2ipQ5kKYukDinahGpkGasmtWCA/viewform?usp=sf_link" target="_blank" rel="noopener"><strong>CrowdCaption Terms of Use</strong></a> as restrictions on access to dataset to privacy protection and use dataset for non-commercial research and/or educational purposes. If you have recieved access, you can download and extract our <strong>CrowdCaption Dataset</strong>.</p>
 <p>The directory structure of the dataset is as follows:</p>
 <pre><code>CrowdCaption/
@@ -817,7 +817,7 @@
     └── part09.zip/
 </code></pre>
 <h2 id="annotations"><strong>Annotations</strong></h2>
-<p>In CrowdCaption dataset, each image may contains multiple caption annotations, and each caption annotations has a detailed region grounding annotation. The location can be denoted as (x_c, y_c, w, h), where (x_c, y_c) denotes the center coordinates of a person, w and h denote its width and height. The dataset annotations are provided in JSON format. Researchers can read the annotation files by the following Python 3 code:</p>
+<p>In CrowdCaption dataset, each image may contains multiple caption annotations, and each caption annotations has a detailed region grounding annotation. The location can be denoted as (x, y, w, h), where (x, y) denotes the top left of the region, w and h denote its width and height. The dataset annotations are provided in JSON format. Researchers can read the annotation files by the following Python 3 code:</p>
 <pre><code> 
 import json
 

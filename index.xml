@@ -114,7 +114,7 @@ The variance of the distribution is $\sigma^{2}$.
       <guid>https://ivipclab.github.io/publication_crowdcaption/multicaption/</guid>
       <description>&lt;h2 id=&#34;crowdcaption-dataset&#34;&gt;&lt;strong&gt;CrowdCaption Dataset&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;CrowdCaption is a new challenging image captioning dataset for complex real-world crowd scene understanding, which towards to describe crowd scene. Our dataset has the advantages of crowd-topic scenes, comprehensive and complex caption descriptions, typical relationships and detailed grounding annotations. The complexity and diversity of the descriptions and the specificity of the crowd scenes make this dataset extremely challenging. This dataset contains 43,306 captions for 21,794 regions with bounding boxes on 11161 images. There are 7,161 images for training, 1,000 images for validation and 3,000 images for testing, respectively.&lt;/p&gt;
-&lt;h2 id=&#34;download-our-crowdcaption-dataset&#34;&gt;&lt;strong&gt;Download our CrowdCaption Dataset&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;download-crowdcaption-dataset&#34;&gt;&lt;strong&gt;Download CrowdCaption Dataset&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;To ensure the rational use of CrowdCaption dataset, researchers requires to sign &lt;a href=&#34;https://docs.google.com/forms/d/e/1FAIpQLSe-lXeeDFoMYqNa-TytDz8-2ipQ5kKYukDinahGpkGasmtWCA/viewform?usp=sf_link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;CrowdCaption Terms of Use&lt;/strong&gt;&lt;/a&gt; as restrictions on access to dataset to privacy protection and use dataset for non-commercial research and/or educational purposes. If you have recieved access, you can download and extract our &lt;strong&gt;CrowdCaption Dataset&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;The directory structure of the dataset is as follows:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;CrowdCaption/
@@ -132,7 +132,7 @@ The variance of the distribution is $\sigma^{2}$.
     └── part09.zip/
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;annotations&#34;&gt;&lt;strong&gt;Annotations&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;In CrowdCaption dataset, each image may contains multiple caption annotations, and each caption annotations has a detailed region grounding annotation. The location can be denoted as (x_c, y_c, w, h), where (x_c, y_c) denotes the center coordinates of a person, w and h denote its width and height. The dataset annotations are provided in JSON format. Researchers can read the annotation files by the following Python 3 code:&lt;/p&gt;
+&lt;p&gt;In CrowdCaption dataset, each image may contains multiple caption annotations, and each caption annotations has a detailed region grounding annotation. The location can be denoted as (x, y, w, h), where (x, y) denotes the top left of the region, w and h denote its width and height. The dataset annotations are provided in JSON format. Researchers can read the annotation files by the following Python 3 code:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt; 
 import json
 
@@ -324,7 +324,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-695241837&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-896251374&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -334,7 +334,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-695241837&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-896251374&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
