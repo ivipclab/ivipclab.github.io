@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yu Dai | ivipc lab</title>
+    <link>https://ivipclab.github.io/author/yu-dai/</link>
+      <atom:link href="https://ivipclab.github.io/author/yu-dai/index.xml" rel="self" type="application/rss+xml" />
+    <description>Yu Dai</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ivipclab.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Yu Dai</title>
+      <link>https://ivipclab.github.io/author/yu-dai/</link>
+    </image>
+    
+    <item>
+      <title>Towards Continual Egocentric Activity Recognition: A Multi-modal Egocentric Activity Dataset for Continual Learning</title>
+      <link>https://ivipclab.github.io/publication_uestc-mmea-cl/mmea-cl/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://ivipclab.github.io/publication_uestc-mmea-cl/mmea-cl/</guid>
+      <description>&lt;h2 id=&#34;uestc-mmea-cl-dataset&#34;&gt;&lt;strong&gt;UESTC-MMEA-CL Dataset&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;UESTC-MMEA-CL is a new multi-modal activity dataset for continual egocentric activity recognition, which is proposed to promote future studies on continual learning for first-person activity recognition in wearable applications. Our dataset provides not only vision data with auxiliary inertial sensor data but also comprehensive and complex daily activity categories for the purpose of continual learning research. UESTC-MMEA-CL comprises 30.4 hours of fully synchronized first-person video clips, acceleration stream and gyroscope data in total. There are 32 activity classes in the dataset and each class contains approximately 200 samples. We divide the samples of each class into the training set, validation set and test set according to the ratio of 7:2:1. For the continual learning evaluation, we present three settings of incremental steps, i.e., the 32 classes are divided into {16, 8, 4} incremental steps and each step contains {2, 4, 8} activity classes, respectively.&lt;/p&gt;
+&lt;h2 id=&#34;download-uestc-mmea-cl-dataset&#34;&gt;&lt;strong&gt;Download UESTC-MMEA-CL Dataset&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Usage License: All videos and data in UESTC-MMEA-CL can be used for academic purposes only, but any commercial use is prohibited.
+Baidu Drive: &lt;a href=&#34;https://pan.baidu.com/s/1HReDzU5cXWo8_jndXhKKzg?pwd=cfeb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://pan.baidu.com/s/1HReDzU5cXWo8_jndXhKKzg?pwd=cfeb&lt;/a&gt;
+Google Drive: &lt;a href=&#34;https://dl.orangedox.com/A44e73ipQ73ilotOxK&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://dl.orangedox.com/A44e73ipQ73ilotOxK&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;(To count downloads, the link to Google Drive is published via ORANGEDOX.)&lt;/p&gt;
+&lt;p&gt;The directory structure of the dataset is as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;UESTC-MMEA-CL/
+├── train.txt
+├── val.txt
+├── test.txt
+├── video/
+│		├── 1_upstairs/
+│ 		├──  ...
+│  		└── 32_watch_TV/
+└── sensor/
+    ├── 1_upstairs/
+├──  ...
+    └── 32_watch_TV/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;note-for-data-files&#34;&gt;&lt;strong&gt;Note for data files&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Video data is in put in the path:‘./video/[class_number]_[class_name]/xx.mp4.’
+eg: ./video/1_upstairs/1_upstairs_2020_12_15_15_58_48.mp4&lt;/p&gt;
+&lt;p&gt;Sensor data contains acceleration and gyro data, put in the path: ‘./sensor/[class_number]_[class_name]/xx.csv.’
+eg: ./sensor/1_upstairs/1_upstairs_2020_12_15_15_58_48.csv&lt;/p&gt;
+&lt;p&gt;The same prefix name represents the data of the same sample. For the details of the sensor data .csv file, the first three columns represent the raw sensing data of the acceleration x, y, and z axes, and the last three columns represent the raw sensing data of the gyroscope&amp;rsquo;s x, y, and z axes. We provide our sensitivity factors in the acquisition settings: Racc = 16384 and Rgyro = 16.4. You can get the real acceleration value (g) and gyroscope angular velocity value (degree/s) by dividing the raw data by the sensitivity coefficient.&lt;/p&gt;
+&lt;p&gt;If you have any question, please concat us.&lt;/p&gt;
+&lt;h2 id=&#34;citation&#34;&gt;&lt;strong&gt;Citation&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;If you find UESTC-MMEA-CL useful in your research, please consider citing:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@article{xu2023towards,
+title={Towards Continual Egocentric Activity Recognition: A Multi-modal Egocentric Activity Dataset for Continual Learning },
+author={Xu, Linfeng and Wu, Qingbo and Pan, Lili and Meng, Fanman and Li, Hongliang and He, Chiyuan and Wang, Hanxin and Cheng, Shaoxu and Dai, Yu},
+journal={arXiv preprint arXiv: 2301.10931},
+year={2023}
+}&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
