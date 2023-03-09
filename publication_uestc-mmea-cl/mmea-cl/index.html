@@ -865,6 +865,7 @@
 <p>Sensor data contains acceleration and gyro data, put in the path: ‘./sensor/[class_number]_[class_name]/xx.csv.’</p>
 <p>eg: ./sensor/1_upstairs/1_upstairs_2020_12_15_15_58_48.csv</p>
 <p>The same prefix name represents the data of the same sample. For the details of the sensor data .csv file, the first three columns represent the raw sensing data of the acceleration x, y, and z axes, and the last three columns represent the raw sensing data of the gyroscope&rsquo;s x, y, and z axes. We provide our sensitivity factors in the acquisition settings: Racc = 16384 and Rgyro = 16.4. You can get the real acceleration value (g) and gyroscope angular velocity value (degree/s) by dividing the raw data by the sensitivity coefficient.</p>
+<p>If you need images as the input, please extract frames from the mp4 videos first. For frame extraction, please refer to this <a href="https://github.com/ivipclab/Frame-extractor" target="_blank" rel="noopener">code</a>.</p>
 <p>If you have any questions, please contact us.</p>
 <h2 id="citation"><strong>Citation</strong></h2>
 <p>If you find UESTC-MMEA-CL useful in your research, please consider citing:</p>
