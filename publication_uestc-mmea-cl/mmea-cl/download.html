@@ -779,18 +779,26 @@
 
 
 
-<a href="#" class="btn btn-outline-primary btn-page-header js-cite-modal"
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10184468" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
         data-filename="/publication_uestc-mmea-cl/mmea-cl/cite.bib">
   Cite
 </a>
 
 
-
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/Xu-Linfeng/UESTC_MMEA_CL_main" target="_blank" rel="noopener">
+  Code
+</a>
   
   
     
   
-<a class="btn btn-outline-primary btn-page-header" href="/publication_uestc-mmea-cl/mmea-cl/" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="/publication_uestc-mmea-cl/mmea-cl/" target="_blank" rel="noopener">
   Dataset
 </a>
 
@@ -845,7 +853,7 @@
 <p>Usage License: All videos and data in UESTC-MMEA-CL <ls><strong>can be used for academic purposes only, but any commercial use is prohibited.</strong></ls></p>
 
 <p>Baidu Drive: <a href="https://pan.baidu.com/s/1HReDzU5cXWo8_jndXhKKzg?pwd=cfeb" target="_blank" rel="noopener">UESTC-MMEA-CL</a></p>
-<p>Google Drive: <a href="https://dl.orangedox.com/A44e73ipQ73ilotOxK" target="_blank" rel="noopener">UESTC-MMEA-CL</a> (To count downloads, the link to Google Drive is published via ORANGEDOX.)</p>
+<p>Dropbox (published via ORANGEDOX): <a href="https://dl.orangedox.com/3Mgrn41GKJeghZkZyQ" target="_blank" rel="noopener">UESTC-MMEA-CL</a> </p>
 <p>The directory structure of the dataset is as follows:</p>
 <pre><code>UESTC-MMEA-CL/
 ├── train.txt
@@ -866,14 +874,19 @@
 <p>Sensor data contains acceleration and gyro data, put in the path: ‘./sensor/[class_number]_[class_name]/xx.csv.’</p>
 <p>eg: ./sensor/1_upstairs/1_upstairs_2020_12_15_15_58_48.csv</p>
 <p>The same prefix name represents the data of the same sample. For the details of the sensor data .csv file, the first three columns represent the raw sensing data of the acceleration x, y, and z axes, and the last three columns represent the raw sensing data of the gyroscope&rsquo;s x, y, and z axes. We provide our sensitivity factors in the acquisition settings: Racc = 16384 and Rgyro = 16.4. You can get the real acceleration value (g) and gyroscope angular velocity value (degree/s) by dividing the raw data by the sensitivity coefficient.</p>
+<p>For convenience, researchers can refer to this <a href="https://github.com/Xu-Linfeng/UESTC_MMEA_CL_main" target="_blank" rel="noopener">code</a> for the usages and evaluation on this dataset.</p>
 <p>If you have any questions, please contact us.</p>
 <h2 id="citation"><strong>Citation</strong></h2>
 <p>If you find UESTC-MMEA-CL useful in your research, please consider citing:</p>
-<pre><code>@article{xu2023towards,
-	title={Towards Continual Egocentric Activity Recognition: A Multi-modal Egocentric Activity Dataset for Continual Learning },
-	author={Xu, Linfeng and Wu, Qingbo and Pan, Lili and Meng, Fanman and Li, Hongliang and He, Chiyuan and Wang, Hanxin and Cheng, Shaoxu and Dai, Yu},
-	journal={arXiv preprint arXiv: 2301.10931},
-	year={2023}
+<pre><code>@ARTICLE{10184468,
+  author={Xu, Linfeng and Wu, Qingbo and Pan, Lili and Meng, Fanman and Li, Hongliang and He, Chiyuan and Wang, Hanxin and Cheng, Shaoxu and Dai, Yu},
+  journal={IEEE Transactions on Multimedia}, 
+  title={Towards Continual Egocentric Activity Recognition: A Multi-Modal Egocentric Activity Dataset for Continual Learning}, 
+  year={2024},
+  volume={26},
+  number={},
+  pages={2430-2443},
+  doi={10.1109/TMM.2023.3295899}}
 }
 </code></pre>
 
