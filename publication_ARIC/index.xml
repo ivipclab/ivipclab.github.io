@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications | ivipc lab</title>
+    <link>https://ivipclab.github.io/publication_ARIC/</link>
+      <atom:link href="https://ivipclab.github.io/publication_ARIC/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ivipclab.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Publications</title>
+      <link>https://ivipclab.github.io/publication_ARIC/</link>
+    </image>
+    
+    <item>
+      <title>Few-Shot Continual Learning for Activity Recognition in Classroom Surveillance Images</title>
+      <link>https://ivipclab.github.io/publication_ARIC/ARIC/</link>
+      <pubDate>Sun, 03 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://ivipclab.github.io/publication_ARIC/ARIC/</guid>
+      <description>&lt;h2 id=&#34;ARIC-dataset&#34;&gt;&lt;strong&gt;ARIC Dataset&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;ARIC is a new multi-modal dataset for continual learning, which is proposed to promote future studies on continual learning for activity recognition in classroom scenes.&lt;/p&gt;
+&lt;h2 id=&#34;download-ARIC-dataset&#34;&gt;&lt;strong&gt;Download ARIC Dataset&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Usage License: All files in the ARIC dataset can be used for academic purposes only, but any commercial use is prohibited.&lt;/p&gt;
+&lt;p&gt;Baidu Drive: &lt;a href=&#34;https://pan.baidu.com/s/1HReDzU5cXWo8_jndXhKKzg?pwd=cfeb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://pan.baidu.com/s/1HReDzU5cXWo8_jndXhKKzg?pwd=cfeb&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Google Drive: &lt;a href=&#34;https://dl.orangedox.com/Uo18BbVsXatlrR7DiF&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://dl.orangedox.com/Uo18BbVsXatlrR7DiF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;(To count downloads, the link to Google Drive is published via ORANGEDOX.)&lt;/p&gt;
+&lt;p&gt;The directory structure of the dataset is as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ARIC-dataset/
+            index/
+            ├── train/
+            │   ├── train_0.txt
+            │   ├── train_1.txt
+            │   └── ...
+            ├── test/
+            │   ├── test_0.txt
+            │   ├── test_1.txt
+            │   └── ...
+            image_features/
+            ├── vit
+            ├── clipvit
+            └── resnet
+            audio/
+            ├── wav_00001.wav
+            ├── wav_00002.wav
+            └── ...
+            text/
+            ├── 00001.txt
+            ├── 00002.txt
+            └── ...
+            Readme.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;note-for-data-files&#34;&gt;&lt;strong&gt;Note for data files&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;For your convenience in utilizing our dataset, we also provide a dataloader.&lt;/p&gt;
+&lt;p&gt;It comes with preset task configurations, which can be controlled by passing parameters to specify the data sources and task settings you wish to access.&lt;/p&gt;
+&lt;p&gt;Due to space limitations, please refer to the ReadMe.md of ARIC-dataset for more details about dataloader.&lt;/p&gt;
+&lt;p&gt;If you have any questions, please contact us.&lt;/p&gt;
+&lt;h2 id=&#34;citation&#34;&gt;&lt;strong&gt;Citation&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;If you find the ARIC dataset useful in your research, please consider citing:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@misc{qian2024fewshotcontinuallearningactivity,
+      title={Few-Shot Continual Learning for Activity Recognition in Classroom Surveillance Images}, 
+      author={Yilei Qian and Kanglei Geng and Kailong Chen and Shaoxu Cheng and Linfeng Xu and Hongliang Li and Fanman Meng and Qingbo Wu},
+      year={2024},
+      eprint={2409.03354},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2409.03354}, 
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
