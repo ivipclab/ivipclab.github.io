@@ -189,13 +189,17 @@
 	  <a name="download"></a><h2 id="download-ARIC-dataset"><strong>Download ARIC Dataset</strong></h2></a>
 	  <p>Baidu Drive: <a href="https://pan.baidu.com/s/1AQ_3PI7cvv_rhxb_MpmuEA?pwd=40az" target="_blank" rel="noopener">ARIC</a> </p>
 	  <p>Dropbox (published via ORANGEDOX): <a href="https://dl.orangedox.com/Uo18BbVsXatlrR7DiF" target="_blank" rel="noopener">ARIC</a> </p>
+    
+    <p>Baidu Drive: <a href="https://pan.baidu.com/s/184WVuKlIzsqtwwEusf2urw?pwd=egwc" target="_blank" rel="noopener">ARIC_supplement</a> </p>
+	  <p>Dropbox (published via ORANGEDOX): <a href="https://dl.orangedox.com/9KSz1r5Lt3tnYzU4zE" target="_blank" rel="noopener">ARIC_supplement</a> </p>
       <p>Usage License: All files in the ARIC dataset <ls><strong>can be used for academic purposes only, but any commercial use is prohibited.</strong></ls>
       </p>
       <p>To protect the privacy of individuals appearing in the images, we refrain from publishing the original pictures. </p>
       <p>Instead, we share annotated class-instance images extracted from the original pictures using pre-trained models' shallow features. </p> 
       <p>for three pre-trained model, you can choose one and download specified image_features, and you may find more detailed introduction in the Readme.md. </p>
 	   <p>The directory structure of the ARIC dataset is as follows:</p>
-          <pre><code>ARIC-dataset/
+          <pre><code>
+            ARIC-dataset/
             index/
             ├── train/
             │   ├── train_0.txt
@@ -219,7 +223,21 @@
             └── ...
             Readme.md
         
-</code></pre>
+        </code></pre>
+        <p> The directory structure of ARIC_supplement is as follows</p>
+        <pre><code>
+          ARIC_supplement
+          ├── annotations
+          │   ├── 00001.json
+          │   ├── 00002.json  
+          │   └── 00003.json
+          └── global_view_features
+              ├── clipvit
+              ├── resnet
+          └── vit
+          ReadMe.md
+        </code></pre>
+        
           <h2 id="note-for-data-files"><strong>Note for data files</strong></h2>
           <p> For your convenience in utilizing our dataset, we also provide a dataloader.</p>
           <p> It comes with preset task configurations, which can be controlled by passing parameters to specify the data sources and task settings you wish to access.</p>
