@@ -200,43 +200,47 @@
 	   <p>The directory structure of the ARIC dataset is as follows:</p>
           <pre><code>
             ARIC-dataset/
-            index/
-            ├── train/
-            │   ├── train_0.txt
-            │   ├── train_1.txt
-            │   └── ...
-            ├── test/
-            │   ├── test_0.txt
-            │   ├── test_1.txt
-            │   └── ...
-            image_features/
-            ├── vit
-            ├── clipvit
-            └── resnet
-            audio/
-            ├── wav_00001.wav
-            ├── wav_00002.wav
-            └── ...
-            text/
-            ├── 00001.txt
-            ├── 00002.txt
-            └── ...
-            Readme.md
+            ├── index/
+            │    ├── train/
+            │    │   ├── train_0.txt
+            │    │   ├── train_1.txt
+            │    │   └── ...
+            │    ├── test/
+            │    │   ├── test_0.txt
+            │    │   ├── test_1.txt
+            │    │   └── ...
+            ├── image_features/
+            │    ├── vit
+            │    ├── clipvit
+            │    └── resnet
+            ├──  audio/
+            │    ├── wav_00001.wav
+            │    ├── wav_00002.wav
+            │    └── ...
+            ├──  text/
+            │    ├── 00001.txt
+            │    ├── 00002.txt
+            │    └── ...
+            └──Readme.md
         
-        </code></pre>
-        <p> The directory structure of ARIC_supplement is as follows</p>
-        <pre><code>
-          ARIC_supplement
-          ├── annotations
-          │   ├── 00001.json
-          │   ├── 00002.json  
-          │   └── 00003.json
-          └── global_view_features
-              ├── clipvit
-              ├── resnet
-          └── vit
-          ReadMe.md
-        </code></pre>
+          </code></pre>
+          <p>Since the ARIC dataset only provides features for individual instances and lacks global field-of-view information from the original images, we have compiled and released ARIC_supplement to bridge this gap.</p>
+
+          <p>In ARIC_supplement, we provide the shallow features of the original images after resizing them to (640, 640) and passing them through three types of training networks. Additionally, we include the initial annotation JSON file, which contains the xyxy coordinates of different instances within each image.</p> 
+          <p>The directory structure of the ARIC dataset is as follows:</p>
+          <p> We also provide a decompression script for convenience. The directory structure of ARIC_supplement is as follows:</p>
+          <pre><code>
+            ARIC_supplement
+            ├── annotations
+            │   ├── 00001.json
+            │   ├── 00002.json  
+            │   └── 00003.json
+            └── global_view_features
+            │   ├── clipvit
+            │   ├── resnet
+            │   └── vit
+            └── ReadMe.md
+          </code></pre>
         
           <h2 id="note-for-data-files"><strong>Note for data files</strong></h2>
           <p> For your convenience in utilizing our dataset, we also provide a dataloader.</p>

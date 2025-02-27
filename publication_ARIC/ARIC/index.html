@@ -194,37 +194,39 @@
           <p>To protect the privacy of individuals appearing in the images, we refrain from publishing the original pictures. </p>
           <p>Instead, we share annotated class-instance images extracted from the original pictures using pre-trained models' shallow features. </p> 
           <p>for three pre-trained model, you can choose one and download specified image_features, and you may find more detailed introduction in the Readme.md. </p>
-          <p>Download: <a href="http://47.109.34.137/dataset_getting_aric/index.php" target="_blank" rel="noopener">ARIC</a></p>          <p>The directory structure of the ARIC dataset is as follows:</p>
+          <p>Download: <a href="http://47.109.34.137/dataset_getting_aric/index.php" target="_blank" rel="noopener">ARIC</a></p>          
+          <p>Download: <a href="http://47.109.34.137/dataset_getting_aric/index.php" target="_blank" rel="noopener">ARIC_supplement</a></p> 
+          <p>The directory structure of the ARIC dataset is as follows:</p>
           <pre><code>
             ARIC-dataset/
-            index/
-            ├── train/
-            │   ├── train_0.txt
-            │   ├── train_1.txt
-            │   └── ...
-            ├── test/
-            │   ├── test_0.txt
-            │   ├── test_1.txt
-            │   └── ...
-            image_features/
-            ├── vit
-            ├── clipvit
-            └── resnet
-            audio/
-            ├── wav_00001.wav
-            ├── wav_00002.wav
-            └── ...
-            text/
-            ├── 00001.txt
-            ├── 00002.txt
-            └── ...
-            Readme.md
+            ├── index/
+            │    ├── train/
+            │    │   ├── train_0.txt
+            │    │   ├── train_1.txt
+            │    │   └── ...
+            │    ├── test/
+            │    │   ├── test_0.txt
+            │    │   ├── test_1.txt
+            │    │   └── ...
+            ├── image_features/
+            │    ├── vit
+            │    ├── clipvit
+            │    └── resnet
+            ├──  audio/
+            │    ├── wav_00001.wav
+            │    ├── wav_00002.wav
+            │    └── ...
+            ├──  text/
+            │    ├── 00001.txt
+            │    ├── 00002.txt
+            │    └── ...
+            └──Readme.md
         
           </code></pre>
           <p>Since the ARIC dataset only provides features for individual instances and lacks global field-of-view information from the original images, we have compiled and released ARIC_supplement to bridge this gap.</p>
 
           <p>In ARIC_supplement, we provide the shallow features of the original images after resizing them to (640, 640) and passing them through three types of training networks. Additionally, we include the initial annotation JSON file, which contains the xyxy coordinates of different instances within each image.</p> 
-          <p>Download: <a href="http://47.109.34.137/dataset_getting_aric/index.php" target="_blank" rel="noopener">ARIC_supplement</a></p>          <p>The directory structure of the ARIC dataset is as follows:</p>
+          <p>The directory structure of the ARIC dataset is as follows:</p>
           <p> We also provide a decompression script for convenience. The directory structure of ARIC_supplement is as follows:</p>
           <pre><code>
             ARIC_supplement
@@ -233,10 +235,10 @@
             │   ├── 00002.json  
             │   └── 00003.json
             └── global_view_features
-                ├── clipvit
-                ├── resnet
-            └── vit
-            ReadMe.md
+            │   ├── clipvit
+            │   ├── resnet
+            │   └── vit
+            └── ReadMe.md
           </code></pre>
           <h2 id="note-for-data-files"><strong>Note for data files</strong></h2>
           <p> For your convenience in utilizing our dataset, we also provide a dataloader.</p>
